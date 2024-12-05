@@ -1,0 +1,30 @@
+data = [65, 22, 34, 35, 41, 5, 15, 31, 9, 47, 10]
+angka = int(input('angka yang di cari: '))
+print ('sebelum bubble short', data)
+
+i=2
+while(i>0):
+    i=0
+    for j in range (10):
+        if data[j]> data[j+1]:
+            temp= data[j]
+            data[j]=data[j+1]
+            data[j+1]=temp
+            i=i+1
+print('hasil bubble short', data)
+
+a=0
+b=11
+while(a<=b):
+    j=(b+a)//2
+    if j>10 or j<1:
+        print('tidak ada')
+        a=100
+
+    elif data[j]== angka:
+        print('elemen ditentukan di urutan ke-', j+1)
+        a=100
+    elif data[j]>angka:
+        b=j-1
+    elif data[j]<angka:
+        a=j+1
