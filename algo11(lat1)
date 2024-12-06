@@ -1,0 +1,18 @@
+class Bio:
+    bioCount = 0
+    def __init__(self, name, nim, year): 
+        self.name = name
+        self.nim = nim
+        self.year = year
+        Bio.bioCount += 1
+    def displayCount(self):
+        print("Total Mahasiswa %d" % Bio.bioCount)
+
+name1 = input("Masukkan nama: ")
+nim1 = input("Masukkan NIM: ")
+year1 = input("Masukkan tahun masuk: ")
+mhs1 = Bio(name1, nim1, year1)
+print(f"Nama : {mhs1.name}")  
+print(f"NIM : {mhs1.nim}")
+print(f"Angkatan : {mhs1.year}")
+print(mhs1.bioCount)
